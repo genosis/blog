@@ -13,3 +13,27 @@
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+
+<h3>Comments</h3>
+
+  <% @post.comments.each do |comment| %>
+    <p><%= comment.author %> said:</p>
+    <blockquote><%= comment.body %></blockquote>
+  
+  <% end %>
+  
+  <h3>Add a Comment</h3>
+  <%= form_for([@post, @post.comments.build]) do |f| %>
+    <div class="field">
+      <%= f.label :author %><br />
+      <%= f.text_field :author %>
+    </div>
+    <div class="field">
+      <%= f.label :body %><br />
+      <%= f.text_area :body %>
+    </div>
+    <div class="actions">
+      <%= f.submit %> 
+    </div>
+  <% end %>
+  
