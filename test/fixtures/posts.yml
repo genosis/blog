@@ -1,9 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  title: MyString
-  body: MyText
+  title: First Post	
+  author: Geno
+  body: Hello, World!
 
 two:
-  title: MyString
-  body: MyText
+  title: Another Post
+  author: Geno
+  body: Some more body text
